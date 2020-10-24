@@ -3,4 +3,14 @@
 	margin: auto;
 	display: flex;
 	justify-content: center;
+	flex-flow: row wrap;
+}
+.login{
+	flex-flow: column wrap;
+}
+#login-form{
+	margin:auto;
+}
+#login-form .input-group{
+	max-width:400px;
 }
