@@ -4,23 +4,24 @@ function check_if_user_logged_in(){
 	//status['user'] = false;
 	//Установить так же значение кнопки
 	if(status['user']){
-		headers['Authorization']='Token '+status['token'];
-		delete headers['WWW-Authenticate'];
+		headers['Tokin']='Token '+status['token'];
 		$('.login_button').text(status['user']);
+		return true;
 	}else{
-		headers['WWW-Authenticate']='Token';
-		delete headers['Authorization'];
+		delete headers['Tokin'];
 		$('.login_button').attr('onclick',"load_login_page()");
 		$('.login_button').text("Log In");
+		return false;
 	}
 }
 
 
 function load_login_page(){
 	if(status['user']){
+		$('.content').removeClass('login');
 		load_main_page();
 	}else{
-		$('.content').addClass('login')
+		$('.content').addClass('login');
 		$('.content').load('login.html');
 	}
 }
@@ -37,7 +38,7 @@ function login_user(username,password){
 				status['token']=token;
 				status['user']=username;
 				check_if_user_logged_in();
-				load_subscribed_blogs();
+				load_main_page();
 			}else{
 				status['user']=false;
 				$('#errors').append('<div class="alert alert-danger" role="alert"> \

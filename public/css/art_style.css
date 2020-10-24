@@ -1,0 +1,26 @@
+.article{
+	background: #ede7e6;
+	padding:30px;
+	margin:10px;
+}
+
+.art-header{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.art-text{
+	text-align: justify;
+	font-size: 18px;
+	font-weight:normal;
+}
+
+.art-date{
+	font-size: 9px;
+	color:grey;
+	text-align: right;
+}
+
+.art-read{
+	font-size: 24px;
+}

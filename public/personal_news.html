@@ -1,2 +1,24 @@
-<div>Here's the subscriptions</div>
-<div>Here's the available blogs</div>
+<div class="news">
+	<div class="btn-group btn-group-toggle" data-toggle="buttons">
+	  <label class="btn btn-secondary active">
+	    <input type="radio" name="options" id="all_news" autocomplete="off" checked> All
+	  </label>
+	  <label class="btn btn-secondary">
+	    <input type="radio" name="options" id="subscribed_news" autocomplete="off"> Subscriptions
+	  </label>
+	</div>
+	<div id="news">Here's the news</div>
+</div>
+<div class='blogs'>Here's the available blogs</div>
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript">
+	$(function(){
+		if(!status['user']){
+			$('#subscribed_news').attr('onchange','load_login_page()');
+		}else{
+			$('#subscribed_news').attr('onchange','load_subscribed_news()');
+		}
+		$('#all_news').attr('onchange','load_all_news()');
+	})
+</script>
