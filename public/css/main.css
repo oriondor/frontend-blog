@@ -1,9 +1,14 @@
+
 .content{
 	margin: auto;
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
+}
+@media screen and (max-width:867px){
+	.content{
 	flex-wrap: wrap-reverse;
+	}
 }
 .login{
 	flex-flow: column wrap;
