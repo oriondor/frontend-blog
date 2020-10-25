@@ -1,6 +1,6 @@
 let status = {}
-let HOST = 'https://blogger-api-prod.herokuapp.com';
-//let HOST = 'http://127.0.0.1:8000';
+//let HOST = 'https://blogger-api-prod.herokuapp.com';
+let HOST = 'http://127.0.0.1:8000';
 let headers = {
 'Accept': 'application/json'
 }

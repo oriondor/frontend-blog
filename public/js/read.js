@@ -14,7 +14,8 @@ function posts_read_stuff(){
 					headers['X-CSRFToken'] = $.cookie('csrftoken');
 					$('.article').each(function(){
 						if(data['reads'].includes(parseInt($(this).attr('post-id')))){
-							$(this).find('.status_read').text('✔');
+							console.log()
+							$(this).find('.status-read').text('✔');
 						}
 					});
 				}
