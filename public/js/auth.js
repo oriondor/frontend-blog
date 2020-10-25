@@ -4,11 +4,11 @@ function check_if_user_logged_in(){
 	//status['user'] = false;
 	//Установить так же значение кнопки
 	if(status['user']){
-		headers['Tokin']='Token '+status['token'];
+		headers['Authorization']='Token '+status['token'];
 		$('.login_button').text(status['user']);
 		return true;
 	}else{
-		delete headers['Tokin'];
+		delete headers['Authorization'];
 		$('.login_button').attr('onclick',"load_login_page()");
 		$('.login_button').text("Log In");
 		return false;

@@ -1,12 +1,16 @@
+
 .article{
 	background: #ede7e6;
 	padding:30px;
 	margin:10px;
 }
-
+#article{
+	width:90%;
+}
 .art-header{
 	font-size: 24px;
 	font-weight: bold;
+	cursor:pointer;
 }
 
 .art-text{
@@ -23,4 +27,38 @@
 
 .art-read{
 	font-size: 24px;
+	cursor:pointer;
 }
+
+.blog{
+	font-size: 20px;
+	cursor:pointer;
+	-webkit-transition: all 1000ms ease;
+	-moz-transition: all 1000ms ease;
+	-ms-transition: all 1000ms ease;
+	-o-transition: all 1000ms ease;
+	transition: all 1000ms ease;
+}
+.blog .badge{
+	float: right;
+	font-size: 95%;
+}
+.blog:hover{
+	background: #cde3fa;
+	-webkit-transition: all 1000ms ease;
+	-moz-transition: all 1000ms ease;
+	-ms-transition: all 1000ms ease;
+	-o-transition: all 1000ms ease;
+	transition: all 1000ms ease;
+}
+
+.followed{
+	background: #cde3fa;
+}
+
+.read{
+	content: '&#10004;';
+}
+
+
+

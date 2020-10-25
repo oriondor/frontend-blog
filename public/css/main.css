@@ -22,4 +22,6 @@
 .blogs{
 	width:30%;
 	min-width: 260px;
+	overflow-y:auto;
+	max-height: 150px;
 }
