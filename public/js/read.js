@@ -31,7 +31,7 @@ function read(el){
 			url:HOST+'/show/read/',
 			type:"DELETE",
 			headers:headers,
-			data:{post_id:$(el).attr('post-id')},
+			data:{post_id:$(el).parent().attr('post-id')},
 			success:function(data){
 				console.log(data);
 			}
@@ -43,7 +43,7 @@ function read(el){
 			url:HOST+'/show/read/',
 			type:"POST",
 			headers:headers,
-			data:{post_id:$(el).attr('post-id')},
+			data:{post_id:$(el).parent().attr('post-id')},
 			success:function(data){
 				console.log(data);
 			}

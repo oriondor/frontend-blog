@@ -1,6 +1,6 @@
 let status = {}
-//let HOST = 'https://blogger-api-prod.herokuapp.com';
-let HOST = 'http://127.0.0.1:8000';
+let HOST = 'https://blogger-api-prod.herokuapp.com';
+//let HOST = 'http://127.0.0.1:8000';
 let headers = {
 'Accept': 'application/json'
 }
@@ -11,6 +11,7 @@ $(function(){
 	}else{
 		load_main_page();
 	}
+	interval_specific_calls(10000);
 	
 });
 function load_main_page(){
@@ -32,6 +33,7 @@ function load_all_news(){
 			append_blogs('#blogs',data);
 			blogs_follows_stuff();
 			posts_read_stuff();
+			return data;
 		},
 		error:function(data){
 			console.log("Error occuired!")
@@ -56,6 +58,7 @@ function load_subscribed_news(){
 			append_blogs('#blogs',data);
 			blogs_follows_stuff();
 			posts_read_stuff();
+			return data;
 		},
 		error:function(data){
 			console.log("Error occuired!")
